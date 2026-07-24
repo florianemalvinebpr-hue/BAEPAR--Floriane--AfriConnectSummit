@@ -1,27 +1,27 @@
 
 :root {
                         /*------Variables Css: Les couleurs--------*/
-  --couleur-principale: #FF6B35;
-  --couleur-secondaire: #004E89;
-  --couleur-accent: #F7931E;
-  --couleur-fond: #1a1a1a;
-  --couleur-clair: #ffffff;
-  --couleur-texte: #333;
-  --couleur-bordure: #e0e0e0;
-  --couleur-succes: #28a745;
-  --trans: all 0.3s ease;     /*Transition fluide pour les animations*/
+  --couleur-principale:#FF6B35;
+  --couleur-secondaire:#004E89;
+  --couleur-accent:#F7931E;
+  --couleur-fond:#1a1a1a;
+  --couleur-clair:#ffffff;
+  --couleur-texte:#333;
+  --couleur-bordure:#e0e0e0;
+  --couleur-succes:#28a745;
+  --trans:all 0.3s ease;     /*Transition fluide pour les animations*/
 
   
                        /* ------Espacements de base----------*/
-  --xs: 0.5rem;
-  --sm: 1rem;
-  --md: 1.5rem;
-  --lg: 2rem;
-  --xl: 3rem;
-  --xxl: 4rem;
+  --xs:0.5rem;
+  --sm:1rem;
+  --md:1.5rem;
+  --lg:2rem;
+  --xl:3rem;
+  --xxl:4rem;
   
                          /*-------Google Fonts (Police)---------*/
-  --police: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --police:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 } 
 
                          /* ------Mode sombre----------*/
@@ -98,7 +98,7 @@ header {
   display: flex;
   list-style: none; /*Supprime les puces par defaut*/
   gap: var(--lg);   /*Espacement entre chaque liens*/
-  align-items: center;
+  align-items:center;
 }
    /*Style individuel pour chaque liens du menu */
 .nav-link {
@@ -254,7 +254,7 @@ header {
 #hero h2 {
   font-size: 1.5rem;
   font-weight: 300;
-  margin-bottom: var(--lg);
+   margin-bottom: var(--lg);
   opacity: 0.95;
 }
     /*Style pour les boutons à l'interieur du héro*/
@@ -267,11 +267,145 @@ header {
 #hero .btn-primary {
   background-color: var(--couleur-accent);
   border-color: var(--couleur-accent);
-  color: var(--couleur-texte);
+   color: var(--couleur-texte);
 }
 
 #hero .btn-primary:hover {
   background-color: transparent;
   color: var(--couleur-clair);
   border-color: var(--couleur-clair);
+}
+
+
+
+                /* ------- Conteneur principale des cartes du compte à rebours---------- */
+.countdown-grid {
+  display: grid;  
+    /*Grille responsive qui crée des colonnes de taille automatique*/
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+   gap:var(--spacing-md); /*Espacement entre les cases*/
+  margin-top: var(--spacing-md);   /*Marge qu'il y a au dessus de la grille*/
+}
+  /*Carte du compte à rebours*/
+.countdown-item {
+  background-color: rgba(255, 255, 255, 0.15);  /*Fonds semi transparent (Pour Dark Mode)*/
+  padding: var(--spacing-md);
+  border-radius: 10px;  /*Coins arrondis*/
+  text-align: center;  /*Centre les chiffres et ses étiquettes*/
+  transition: var(--transition);   /*Animation fluide pour les effets de survol*/
+}
+   /*Effet de survol d'une case du compte à rebours*/
+.countdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.25);   /*Augmente la luminosité du fond*/
+  transform: scale(1.05);   /*Léger agrandissement*/
+}
+   /*Valeur du compte à rebours*/
+.countdown-value {
+  display: block;     /*Affiche la valeur comme un élément de bloc*/
+  font-size:var(--font-size-xxl);  /*Très grande taille de police*/
+  font-weight:  800;          /*Texte en gras*/
+  margin-bottom: var(--spacing-xs);   /*Petit espacement en bas*/
+}
+   /*Texte sous les chiffres*/
+.countdown-item p {
+  font-size:  var(--font-size-sm);   /*Petite taille de police*/
+  margin: 0;     /*Supprime les marges par défaut*/
+}
+
+                         /* ------Section des statistiques-------- */
+#stats {
+  display: grid;
+ /*Grille responsive chaque statistiques a une valeur minimale de 150px et une largeur maximale de 1fr*/
+  grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-lg);     /*Espacement entre les cases*/
+  margin-top: var(--spacing-xxl);
+  position: relative;
+  z-index: 1;    /*Garantit que les statistiques sont au-dessus d'élements decorés*/
+}
+   /*Carte individuelle de statistiques*/
+.stat {
+  background-color: rgba(255, 255, 255, 0.1);  /*Fonds semi-transparent*/
+  padding: var(--spacing-lg);
+  border-radius: 10px;
+  text-align: center;
+  transition: var(--transition);
+}
+  /*Effet de survol d'une carte de statistiques*/
+.stat:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);      /*Fait un léger soulèvement de la carte */
+}
+  /*Chiffre clé de la statistique*/
+.compteur {
+  display:block;      /*affiche le chiffre comme un élément de bloc*/
+  font-size: var(--font-size-xxl);
+  font-weight: 800;
+  margin-bottom: var(--spacing-sm);
+}
+  /*Texte sous les chiffre*/
+.stat p {
+  font-size: var(--font-size-sm);
+  margin: 0;
+  opacity: 0.9;         /*Légère transparence pour le texte*/
+}
+                        /*------Animations-------*/
+    /* Animation pour les éléments flottants */
+@keyframes float {
+  0%, 100% { 
+    transform:translateY(0px) rotate(0deg);   /*Position initiale et rotation*/
+  }
+  50% {
+      transform: translateY(-30px) rotate(10deg); /* Monte de 30px et fait une rotation de 10deg */
+     }
+}
+
+                  /* ------Contenu principal------- */
+    /*Zone principale de HTML*/
+main {
+   /*S'arrure que la zone principale s'étend sur toute la hauteur de l'écran*/
+  min-height: calc(100vh - 200px);
+  padding: var(--spacing-xl),var(--spacing-lg);
+}
+   /*Conteneur pour le contenu principal et limiter sa largeur*/
+.container {
+  max-width: 1200px;    /*La largeur maximale du conteneur*/
+  margin: 0 auto;     /*Centre automatiquement le conteneur*/
+}
+
+        /*Les titres dans le conteneur principal*/
+  /*Titre principal de la page*/
+main h1 {
+  font-size: var(--font-size-xxxl);
+  color: var(--couleur-principale);
+  margin-bottom: var(--spacing-md);
+  font-weight: 800;
+}
+ /*Titre des sous sections*/
+main h2 {
+  font-size: var(--font-size-xxl);
+  color: var(--couleur-clair);
+  margin: var(--spacing-lg) 0 var(--spacing-md) 0;
+  font-weight: 700;
+}
+  /*Titre des sous parties*/
+main h3 {
+  font-size: var(--font-size-xl);
+  color: var(--couleur-texte);
+  margin: var(--spacing-md) 0;
+    font-weight: 700;
+}
+
+                      /*------ Fil d'Ariane -------*/
+.page-hero {
+  background-color: var(--light-bg);
+  padding: var(--spacing-lg);
+  border-left: 5px solid var(--couleur-principale);    /*Ligne de décoration de couleur principale*/
+   margin-bottom: var(--spacing-xl);
+  border-radius: 5px;
+}
+  /*Texte à l'intérieur du bloc de len tete */
+.page-hero p {
+    color: var(--couleur-texte);
+  margin:0;
+  font-weight:500;
 }
