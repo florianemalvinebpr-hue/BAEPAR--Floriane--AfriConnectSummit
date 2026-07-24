@@ -1,0 +1,277 @@
+
+:root {
+                        /*------Variables Css: Les couleurs--------*/
+  --couleur-principale: #FF6B35;
+  --couleur-secondaire: #004E89;
+  --couleur-accent: #F7931E;
+  --couleur-fond: #1a1a1a;
+  --couleur-clair: #ffffff;
+  --couleur-texte: #333;
+  --couleur-bordure: #e0e0e0;
+  --couleur-succes: #28a745;
+  --trans: all 0.3s ease;     /*Transition fluide pour les animations*/
+
+  
+                       /* ------Espacements de base----------*/
+  --xs: 0.5rem;
+  --sm: 1rem;
+  --md: 1.5rem;
+  --lg: 2rem;
+  --xl: 3rem;
+  --xxl: 4rem;
+  
+                         /*-------Google Fonts (Police)---------*/
+  --police: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
+
+                         /* ------Mode sombre----------*/
+body.dark-mode {
+  --couleur-clair: #2a2a2a;
+  --couleur-texte: #e0e0e0;
+  --couleur-bordure: #444;
+}
+
+                          /* ------Reset de base---------*/
+                  /* Tailles pour les éléments HTML*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+                     /*Active le défilement fluide lors du clic sur l'ancre*/
+html {
+  scroll-behavior: smooth;
+}
+                /*Styles appliqués à toute les pages*/
+body {
+  font-family: var(--police);
+  background-color: var(--couleur-clair);
+  color: var(--couleur-texte);
+  line-height: 1.6;
+  transition: var(--trans);
+}
+
+                            /* -----Header et Navbar------*/
+  /*Conteneur de l'en-tete fixé en haut*/
+header {
+  background-color: var(--couleur-clair);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);   /*Ombre portée légèrement*/
+  position: sticky;
+  top: 0;
+  z-index: 100;     /*Fait en sorte que le header reste en haut qu'en on défile*/
+} 
+                         
+   /*Permet d'aligner le menu et le logo*/
+.navbar {
+  display: flex;
+  justify-content: space-between;   /*Espace le menu et le logo*/
+  align-items: center;
+  padding: var(--md) var(--lg);
+  border-bottom: 3px solid var(--couleur-principale);   /*Ligne orange en bas*/
+  flex-wrap: wrap;   /*Permet de retourné sur plsrs lignes*/
+}
+  /*Branding: Logo et nom du site*/
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--couleur-principale);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: var(--trans);
+}
+
+.navbar-brand img {
+  height: 40px;
+  margin-right: var(--sm);
+}
+  /*Conteneur rétractable du menu*/
+.navbar-collapse {
+  display: flex;
+  align-items: center;
+  gap: var(--md);
+  flex: 1;
+  justify-content: flex-end;     /*Aligne le contenu à droite*/
+}
+    /*Liste des liens de navigation*/
+.navbar-nav {
+  display: flex;
+  list-style: none; /*Supprime les puces par defaut*/
+  gap: var(--lg);   /*Espacement entre chaque liens*/
+  align-items: center;
+}
+   /*Style individuel pour chaque liens du menu */
+.nav-link {
+  color: var(--couleur-texte);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;   /*Nécéssaire pour les pseudo-éléments ::after et ::before;*/
+  padding: var(--sm) var(--xs);
+  transition: var(--trans);
+  border-radius: 5px;
+}
+  /*Animation1: Ligne de animé sur le lien au survol*/
+.nav-link::after {
+  content: '';   /* Ajoute de la valeur à 'content' pour afficher le pseudo-élément */
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--couleur-principale);
+  transition: width 0.3s ease;
+}
+   /*Animation2: Arrière plan subtil au survol*/
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 107, 53, 0.08);
+  border-radius: 5px;
+  opacity: 0; /*transparence de l'élément*/
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+/*Effet au survol des liens (hover)*/
+.nav-link:hover {
+  color: var(--couleur-principale);
+  transform: translateY(-2px); /*Léger soulèvement au survol*/
+}
+
+.nav-link:hover::after {
+  width: 100%;    /*Déploi la ligne sous le lien*/
+}
+
+.nav-link:hover::before {
+  opacity: 1; /*Fait apparaitre le fond légérement teinté */
+}
+     /*page active*/
+.nav-link.active {
+  color: var(--couleur-principale);
+} 
+  
+                    /* -------Boutons -----*/
+.btn {
+  padding: var(--sm) var(--md);
+  border: 2px solid transparent;
+  border-radius: 25px;    /*Bords arrondis*/
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--trans);
+  text-decoration: none;
+  display: inline-block;
+}
+            /*Bouton principal*/
+.btn-primary {
+  background-color: var(--couleur-principale);
+  color: var(--couleur-clair);
+  border-color: var(--couleur-principale);
+}
+
+.btn-primary:hover {
+  background-color: var(--couleur-secondaire);
+  border-color: var(--couleur-secondaire);
+  transform: translateY(-2px);
+}
+        /*Bouton contour blanc pour fond sombre*/
+.btn-outline {
+    background-color: transparent;
+   border: 2px solid var(--couleur-clair);
+   color: var(--couleur-clair);
+}
+
+.btn-outline:hover {
+  background-color: var(--couleur-clair);
+  color: var(--couleur-principale);
+}
+          /*Bouton contour neutre pour fond clair*/
+.btn-outline-secondary {
+  background-color: transparent;
+  color: var(--couleur-texte);
+  border-color: var(--couleur-bordure);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--couleur-principale);
+  color: var(--couleur-clair);
+  border-color: var(--couleur-principale);
+}
+
+               
+    /*Bouton pour activer et désactiver le mode sombre*/
+#darkModeToggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--couleur-texte);
+  transition: var(--trans);
+}
+
+#darkModeToggle:hover {
+  color: var(--couleur-principale);
+}
+         /*Bouton Hamburger pour le menu mobile : masqué par défaut*/
+.navbar-toggler {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--couleur-texte);
+}
+
+                               /* ----Section Héro -----*/
+    /*Conteneur de la section Héro*/
+#hero {
+  background: var(--couleur-secondaire);
+  color: var(--couleur-clair);
+  padding: var(--xxl) var(--lg);
+  margin-top: 70px;  /*Décale le contenu pour ne pas qu'il soit caché par le navbar*/
+  min-height: 100vh;  /*Occupe toute la hauteur de la fenetre*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+   /*Conteneur de texte à l'interieur du héro*/
+#hero .container {
+  position: relative;
+  max-width: 900px;
+}
+   /*Titre principal*/
+#hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: var(--md);
+  line-height: 1.2;
+}
+          /*Sous titre*/
+#hero h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: var(--lg);
+  opacity: 0.95;
+}
+    /*Style pour les boutons à l'interieur du héro*/
+#hero .btn {
+  margin: var(--sm);
+  padding: var(--md) var(--lg);
+  font-size: 1.1rem;
+}
+  /*Modification des styles du bouton principal*/
+#hero .btn-primary {
+  background-color: var(--couleur-accent);
+  border-color: var(--couleur-accent);
+  color: var(--couleur-texte);
+}
+
+#hero .btn-primary:hover {
+  background-color: transparent;
+  color: var(--couleur-clair);
+  border-color: var(--couleur-clair);
+}
