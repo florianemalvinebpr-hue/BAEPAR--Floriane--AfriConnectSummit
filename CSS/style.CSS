@@ -409,3 +409,274 @@ main h3 {
   margin:0;
   font-weight:500;
 }
+
+                  /* -----Formulaire------- */
+  /* Conteneur principal du formulaire */
+form {
+   background-color:var(--light-bg);    /* Fond clair par variable */
+  padding:var(--spacing-lg);       /* Espacement interne*/
+   border-radius:10px;    /* Coins arrondis*/
+  box-shadow:var(--shadow-md);   /* Ombre porté moyenne */
+  margin: var(--spacing-xl) 0;  /* Marge externe en haut et en bas **/
+}
+/*Grille pour aligner plsrs champs sur une meme ligne */
+.row {
+  display: grid;   /* Grille responsive : s'adapte automatiquement à l'écran */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  /* Grille responsive :s'adapte automatiquement à l'écran */
+  gap:var(--spacing-md);     /* Espace entre les colonnes */
+  margin-bottom: var(--spacing-md);   /* Espacement sous chaque ligne*/
+}
+/* Modificateur de grille :Force un élement à prendre toute la largeur */
+.col-12 {
+  grid-column: 1 / -1;
+}
+/*Force un élment à occuper 1 seule colonne */
+.col-12.col-md-6 {
+  grid-column: span 1;
+}
+/* Options des champs */
+label {
+  display: block;     /* Saffiche sur sa propre ligne */
+  margin-bottom: var(--spacing-xs);    /* Espace sous le texte du label*/
+  font-weight: 600;    /* Texte gras */
+  color: var(--couleur-texte); 
+}
+     /* Style commun pour tous les champs de saisie, listes déroulantes et zones de texte */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  width: 100%;      /* Occupe toutes la largeur disponible */
+  padding: var(--spacing-sm);
+  border: 2px solid var(--couleur-bordure);
+  border-radius: 5px;
+  font-family: var(--police);
+  font-size: var(--font-size-md);
+  transition: var(--trans);       /* Transition fluide lors des interactions*/
+  background-color: var(--light-bg);
+  color: var(--couleur-texte);
+}
+/* Etat actif (Focus) lorsque l'utilisateur clique dans un champ */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;   /* Supprime la bordure bleue par défaut du nav */
+  border-color: var(--couleur-principale);  /*Applique la couleur **/
+  box-shadow:0 0 0 3px rgba(255, 107, 53, 0.1);  /* Légère lueur lumineuse autour du champ */
+}
+          /* Zone de texte multiligne */
+textarea {
+  resize: vertical;   /* Permet de redimensionner uniquement en hauteur */
+  min-height: 150px;     /* Hauteur minimale par défaut */
+}
+
+             /* Boutons d'action de formulaire */
+form .btn {
+  background-color: var(--couleur-principale);
+  color: var(--couleur-clair);
+  border: none;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: 50px;     /*bords complètement arrondis*/
+  font-weight: 600;   
+  font-size: var(--font-size-lg);
+  transition: var(--trans);
+}
+      /* Effet  de survol du bouton */
+form .btn:hover {
+  background-color: var(--couleur-secondaire);
+  transform: translateY(-2px);      /*Légère élévation vers le haut */
+   box-shadow: var(--shadow-lg);    /* Renforce l'ombre pour accentuer l'effet de hauteur */
+}
+
+                /*Programme: carte des thèmes */
+/* Grille réactive pour afficher les cartes de thèmes cote à cote */
+.theme-grid {
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin: var(--spacing-xl) 0;
+}
+/**Style individuel des cartes de thèmes */
+.theme-card {
+  background-color: var(--couleur-secondaire); 
+  color: var(--couleur-clair);
+  padding: var(--spacing-lg);
+  border-radius: 10px;
+  transition: var(--trans);
+  border: none;
+  position: relative;
+}
+
+  /* Effet de survol de la carte */
+.theme-card:hover {
+  transform: translateY(-10px);    /* Elévement  marqué */
+  box-shadow: var(--shadow-lg);
+}
+
+/* Geére le niveau de superposition des textes dans la carte */
+.theme-card h3 {
+  color: var(--couleur-clair);
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+}
+
+                     /*-----------Tableau programme----------- */
+  /* Conteneur englobant le tableau pour lui appliquer des coins arrondis et une ombre */
+.table-card {
+  background-color: var(--light-bg);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;    /* Empeche les bords du tableau de dépasser du conteneur arrondi */
+  margin: var(--spacing-xl) 0;
+}
+    /* Style général du tableau */
+table {
+  width: 100%;
+  border-collapse: collapse;  /* Fusionne les bordures avec les cellules */
+}
+/* En tete du tableau */
+thead {
+  background-color: var(--couleur-principale);
+  color: var(--couleur-clair);
+}
+
+th {
+  padding: var(--spacing-md);
+  text-align: left;
+  font-weight: 700;
+}
+/* Cellule du corps du tableau */
+td {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--couleur-bordure);
+}
+
+tbody tr {
+  transition: var(--trans);
+}
+/* Effet de mise en valeur de la ligne au survol */
+tbody tr:hover {
+  background-color: rgba(255, 107, 53, 0.05);  /*Fond coloré très léger */
+}
+  /* Supprime la bordure sous la dernière ligne */
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+                           /* Intervenants et speakers (pages shell, filters, grille) */
+    /* Conteneur global de la page ou section d'intervenants */
+.page-shell {
+  margin: var(--spacing-xl) 0;
+}
+
+                           /* Liste de filtrage */
+    /* Barre de filtres **/
+.filter-list {
+  display: flex;
+  flex-wrap: wrap;   /* Permet le passage à la ligne sur mobile */
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+  justify-content: center;      /*Centre les filtres horizontalement */
+}
+/* Style de base des boutons de filtre */
+.filter-pill {
+  background-color: var(--light-bg);
+  border: 2px solid var(--couleur-bordure);
+  color: var(--couleur-texte);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--trans);
+}
+      /* Effet de survol du filtre */
+.filter-pill:hover {
+  border-color: var(--couleur-principale);
+  color: var(--couleur-principale);
+}
+  /* etat du filtre */
+.filter-pill.active {
+  background-color: var(--couleur-principale);
+  color: var(--couleur-clair);
+  border-color: var(--couleur-principale);
+}
+
+                                      /* Grille de speakers */
+    /* Grille de présentation des intervenants*/
+.speaker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));  /* S'adapte à la largeur*/
+  gap: var(--spacing-lg);
+  margin: var(--spacing-xl) 0;
+}
+  /* Carte individuelle des intervenants */
+.speaker-card {
+  background-color: var(--light-bg);
+  border-radius: 10px;
+  overflow: hidden;   /* Nécessaire pour que l'image ne dépasse pas au zoom */
+  box-shadow: var(--shadow-md);
+  transition: var(--trans); 
+  border: 2px solid transparent;   /* Préserve la bordure pour éviter un saut d'affichage au hover */
+}
+  /* Animation de la carte au survol */
+.speaker-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--couleur-principale);
+}
+     /* Image du speaker */
+.speaker-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;     /* Recadre proprement l'image sans la déformée */
+  transition: var(--trans);
+}
+/* Effet de zoom sur l'image au survol de la carte */
+.speaker-card:hover img {
+  transform: scale(1.1);  /* Agrandi l'image de 10% */
+}
+/* Contenu de texte sous l'image */
+.speaker-body {
+  padding: var(--spacing-lg);
+}
+
+.speaker-card h2 {
+  color: var(--couleur-principale);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-sm);
+}
+
+.speaker-card p {
+  color: var(--couleur-texte);
+  font-size: var(--font-size-sm);
+  margin: 0;
+  opacity: 0.8;     /* Rendu légèrement assombrie et adoucie */
+}
+
+                        /* -----------Footer------------- */
+
+footer {
+  background: linear-gradient(135deg, var(--couleur-secondaire) 0%, var(--couleur-principale) 100%);
+  color: var(--couleur-clair);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  margin-top: var(--spacing-xxl);
+  text-align: center;
+}
+
+footer p {
+  margin: var(--spacing-sm) 0;
+}
+/* Liens hypertextes dans le footer */
+footer a {
+  color: var(--couleur-accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--trans);
+}
+
+footer a:hover {
+  text-decoration: underline;  /* Souligne le lien au passage de la souris */
+}
