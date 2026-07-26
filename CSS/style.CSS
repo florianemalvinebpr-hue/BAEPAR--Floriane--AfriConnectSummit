@@ -661,13 +661,18 @@ tbody tr:last-child td {
 footer {
   background: linear-gradient(135deg, var(--couleur-secondaire) 0%, var(--couleur-principale) 100%);
   color: var(--couleur-clair);
-  padding: var(--spacing-xl) var(--spacing-lg);
-  margin-top: var(--spacing-xxl);
-  text-align: center;
+  padding: calc(var(--spacing-xxl) * 1.5) var(--spacing-lg);
+  margin-top: calc(var(--spacing-xxl) * 2);
+  text-align: left;
 }
 
 footer p {
   margin: var(--spacing-sm) 0;
+}
+
+footer .row > div {
+  min-height: 220px;
+  padding: 50px;
 }
 /* Liens hypertextes dans le footer */
 footer a {
@@ -680,3 +685,336 @@ footer a {
 footer a:hover {
   text-decoration: underline;  /* Souligne le lien au passage de la souris */
 }
+                            /*--------Mode sombre -----*/
+    /*Arriére plan général du corps et du contenu principal en mode sombre */
+body.dark-mode {
+  background-color: var(--dark-bg);
+}
+
+body.dark-mode main {
+  background-color: var(--dark-bg);
+}
+       /* Formulaire:fond sombre */
+body.dark-mode form {
+  background-color: #333333;
+}
+/*Champs de saisie en mode sombre :fond gris foncée et bordures ajustées */
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode input[type="tel"],
+body.dark-mode textarea,
+body.dark-mode select {
+  background-color: #444444;
+  border-color: #555555;
+}
+/* Maintienla couleur du focus principale lors de la saisie */
+body.dark-mode input[type="text"]:focus,
+body.dark-mode input[type="email"]:focus,
+body.dark-mode input[type="tel"]:focus,
+body.dark-mode textarea:focus,
+body.dark-mode select:focus {
+  border-color: var(--couleur-principale);
+}
+        /*Adapter les filtres, tableaux et cartes au mode sombre */
+body.dark-mode.filter-pill {
+  background-color: #333333;
+  border-color: #555555;
+}
+
+body.dark-mode.table-card {
+  background-color: #333333;
+}
+
+body.dark-mode td {
+  border-bottom-color: #555555;
+}
+/* Légère couleur orange  lors du survol des lignes de tableau */
+body.dark-mode tbody tr:hover {
+  background-color: rgba(255, 107, 53, 0.1);
+}
+
+body.dark-mode .speaker-card {
+  background-color: #333333;
+}
+
+                    /* ---------------Responsive tablettes768px----------- */
+
+@media (max-width: 768px) {
+  /* Réduction de la  taille de polices globales pour les écrans moyens */
+  :root {
+    --font-size-xxxl: 1.75rem;
+    --font-size-xxl: 1.5rem;
+    --font-size-xl: 1.25rem;
+  }
+      /*Adaptationde la section héro */
+  #hero {
+    min-height: 80vh;
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  #hero h1 {
+    font-size: var(--font-size-xxl);
+  }
+
+  #hero h2 {
+    font-size: var(--font-size-lg);
+  }
+           /* Passage du compte à rebours et des stats sur 2 colonnes fixes */
+  .countdown-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+       /* Réduction des marges  qui son à l'interieur du conteneur principal */
+  main {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+/*Passage des thèmes sur 1 seule colonne*/
+  .theme-grid {
+    grid-template-columns: 1fr;
+  }
+   /* Cartes speakers un peu plus serrer */
+  .speaker-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+   /*Active le défilement horizontal (overflow) pour les filtres*/
+  .filter-list {
+    justify-content: flex-start;
+     
+   overflow-x: auto;
+    padding-bottom: var(--spacing-sm);
+  }
+  /*Ajustement de la taille du tableau pour tablette*/
+  table {
+    font-size: var(--font-size-sm);
+  }
+
+  th,td {
+    padding: var(--spacing-sm);
+  }
+}
+
+                /*--------------Responsive mobile 576px---------*/
+
+@media (max-width: 576px) {
+     /* Réduction des variables de police et d'espacement */
+  :root {
+    --font-size-xxxl: 1.5rem;
+    --font-size-xxl: 1.25rem;
+    --font-size-xl: 1rem;
+     -pacing-lg: 1rem;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .navbar {
+    padding: var(--spacing-sm) 0;
+  }
+
+  #hero {
+    margin-top: 60px;
+    min-height: 100vh;
+  }
+
+  #hero h1 {
+    font-size: 1.5rem;
+  }
+
+  #hero h2 {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-md);
+  }
+                 /*Les boutons d'action doivent occuper toute la largeur sur mobile */
+  #hero .btn-primary,
+  #hero .btn-outline {
+    display: block;
+    width: 100%;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .countdown-card {
+    padding: var(--spacing-md);
+  }
+
+  .countdown-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+  }
+
+  .countdown-value {
+    font-size: var(--font-size-xl);
+  }
+    /* Les statistiques passent en empilement vertical*/
+  #stats {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  main {
+    padding: var(--spacing-md);
+  }
+
+  main h1 {
+    font-size: var(--font-size-xl);
+  }
+
+  main h2 {
+    font-size: var(--font-size-lg);
+  }
+
+  .page-hero {
+    padding: var(--spacing-md);
+  }
+
+  form {
+    padding: var(--spacing-md);
+  }
+  /*Passage de tous les élements du grille sur une colonne */
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .theme-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .speaker-grid {
+    grid-template-columns: 1fr;
+  }
+   /* Les filtres s'empilent à la verticale et prennent 100% de largeur */
+  .filter-list {
+    flex-direction: column;
+  }
+
+  .filter-pill {
+    width: 100%;
+    text-align: center;
+  }
+      /*Format  très serrer des  tableaux sur mobile */
+  table {
+    font-size: 0.75rem;
+  }
+
+  th, td {
+    padding: var(--spacing-xs);
+  }
+
+  .speaker-card img {
+    height: 200px;
+  }
+
+  footer {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+}
+
+                    /* -----------Accessibilité------------ */
+
+/* Focus visible pour la navigation au clavier */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid var(--couleur-principale);
+  outline-offset: 2px;
+}
+
+/* Réduction des animations pour les utilisateurs sensibles */
+@media {
+  * {
+    animation-duration: 0.01ms ;
+    animation-iteration-count: 1 ;
+    transition-duration: 0.01ms ;
+  }
+}
+
+          /* Mode contrasté élevé */
+@media {
+  :root {
+    --couleur-principale: #FF4500;
+    --couleur-secondaire: #00008B;
+  }
+}
+              /* -------Bento grille, sponsors et footer avancé-------- */
+  /*Grille Bento 3 colonnes(largeurs asymétriques)*/
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 16px;
+  margin-top: 24px;
+} 
+       /* Style de base d'une carte de Bento grille  */
+.bento-carte {
+  background: var(--light-bg);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--border-radius);
+  padding: 24px;
+  box-shadow: var(--shadow-md);
+  min-height: 220px;
+   background-color: var(--couleur-secondaire);   /*Remplie le fond avec la couleur secondaire */
+   color: var(--couleur-clair);
+} 
+.bento-carte h3{
+  color: var(--couleur-clair);
+}
+/**Effet de décalage visuel sur la deuxième carte */
+.bento-carte:nth-child(2) { 
+  transform: translateY(20px); 
+ } 
+        /* listes numérotées */ 
+.etape-numéro {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;            /* Forme circulaire */
+  background: var(--couleur-principale);
+  color: var(--couleur-clair);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+        /* Style Bootstrap icone à l'intérieur des cartes Bento */
+.bento-carte .bi {
+  font-size: 1.5rem;
+  color: var(--couleur-principale);
+  margin-bottom: 10px;
+}
+   /* Grille présentation des sponsors  */
+#sponsors .row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+/* Bloc personnel pour chaque sponsor */
+#sponsors .row  div {
+  background: var(--light-bg);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  box-shadow: var(--shadow-md);
+}
+      /*Footer flexible à colonnes dynamiques*/
+.footer {
+  text-align: left;
+}
+.footer .row {
+   display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+}
+/* Colonnes du footer : s'adaptent dynamiquement avec une largeur de base de 220px */
+.footer .row > div {
+  flex: 1 1 220px;
+  text-align: left;
+}
+  
