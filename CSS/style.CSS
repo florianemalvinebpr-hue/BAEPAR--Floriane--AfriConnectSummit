@@ -1018,3 +1018,15 @@ textarea:focus {
   text-align: left;
 }
   
+body.dark {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark header {
+    background: #1e1e1e;
+}
+
+body.dark .card {
+    background: #252525;
+}

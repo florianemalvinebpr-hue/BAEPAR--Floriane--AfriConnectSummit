@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <title>Intervenants</title>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+            <div class="container">
+                <!-- Logo -->
+                <!-- <a class="navbar-brand" href="index.html">
+                    <img src="images/logo_africonnectsummit.png" alt="Logo AfriConnectSummit" height="40">
+                </a> -->
+                 <!-- Bouton mobile (Menu Hamburger)-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Ouvrir le menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--Liens de navigation-->
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="navbar-brand" href="index.html"><img src="images/logo_africonnectsummit.png" alt="Logo AfriConnectSummit" height="40"></a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="programme.HTML">Programme</a></li>
+                        <li class="nav-item"><a class="nav-link" href="intervenants.HTML">Intervenants</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.HTML">Inscription & Contact</a></li>
+                    </ul>
+                    <!--Bouton Dark Mode-->
+                    <button id="darkModeToggle" class="btn btn-outline-secondary ms-3" 
+                    type="button" aria-label="Activer le mode sombre"><i class="bi bi-moon" aria-hidden="true"></i>
+                    </button>
+                    <!-- CTA Navbar-->
+                     <a href="programme.HTML" class="btn btn-primary ms-3"> Rejoindre AfriSummitConnect</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container" id="intervenants">
+            <div class="page-hero">
+                <h1>Nos intervenants</h1>
+                <p><strong>Fil d'Ariane :</strong> Accueil &gt; Intervenants</p>
+            </div>
+
+            <div class="page-shell">
+                <div class="filter-list"  aria-label="Filtrer les intervenants">
+                    <button class="filter-pill active" type="button" data-filter="all">Tous</button>
+                    <button class="filter-pill" type="button" data-filter="ia-tech">IA &amp; Tech</button>
+                    <button class="filter-pill" type="button" data-filter="business">Business</button>
+                    <button class="filter-pill" type="button" data-filter="design">Design</button>
+                    <button class="filter-pill" type="button" data-filter="data">Data</button>
+                </div>
+
+                <div class="speaker-grid">
+                    <article class="speaker-card" data-category="business">
+                        <img src="Images/image1.jpg" alt="Aminata Diarra">
+                        <div class="speaker-body">
+                            <h2>Aminata Diarra</h2>
+                            <p>Fondatrice FinTech - Mali - Business</p>
+                        </div>
+                    </article>
+                    <article class="speaker-card" data-category="ia-tech">
+                        <img src="Images/image2.jpg" alt="Kwame Asante">
+                        <div class="speaker-body">
+                            <h2>Kwame Asante</h2>
+                            <p>VP Engineering - Ghana - IA &amp; Tech</p>
+                        </div>
+                    </article>
+                    <article class="speaker-card" data-category="business">
+                        <img src="Images/image3.jpg" alt="Nadia Benali">
+                        <div class="speaker-body">
+                            <h2>Nadia Benali</h2>
+                            <p>Investisseuse tech - Maroc - Business</p>
+                        </div>
+                    </article>
+                    <article class="speaker-card" data-category="ia-tech">
+                        <img src="Images/images4.jpg" alt="Thierno Bah">
+                        <div class="speaker-body">
+                            <h2>Thierno Bah</h2>
+                            <p>Chercheur en IA - Guinée - IA &amp; Tech</p>
+                        </div>
+                    </article>
+                    <article class="speaker-card" data-category="design">
+                        <img src="Images/images5.jpg" alt="Fatoumata Traoré">
+                        <div class="speaker-body">
+                            <h2>Fatoumata Traoré</h2>
+                            <p>Designer UX Lead - Cote d'Ivoire - Design</p>
+                        </div>
+                    </article>
+                    <article class="speaker-card" data-category="data">
+                        <img src="Images/images6.jpg" alt="Samuel Owusu">
+                        <div class="speaker-body">
+                            <h2>Samuel Owusu</h2>
+                            <p>Data Scientist - Ghana - Data</p>
+                        </div>
+                    </article>
+                    <article class="speaker-card" data-category="ia-tech">
+                        <img src="Images/images7.jpg" alt="Khadija El Amrani">
+                        <div class="speaker-body">
+                            <h2>Khadija El Amrani</h2>
+                            <p>CTO - Maroc - IA &amp; Tech</p>
+                        </div>
+                    </article>
+                    <article class="speaker-card" data-category="design">
+                        <img src="Images/images8.jpg" alt="Bakary Coulibaly">
+                        <div class="speaker-body">
+                            <h2>Bakary Coulibaly</h2>
+                            <p>Product Designer - Mali - Design</p>
+                        </div>
+                    </article>
+                    <article class="speaker-card" data-category="data">
+                        <img src="Images/images9.jpg" alt="Aissatou Barry">
+                        <div class="speaker-body">
+                            <h2>Aissatou Barry</h2>
+                            <p>Analyste Data - Guinée - Data</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+                  <!--=========Footer=========-->
+             <footer class="footer">
+                <div class="container">
+                    <div class="row">
+
+                        <!--Colonne1-->
+                        <div class="col-12 col-md-3">
+                            <img src="images/logo_africonnectsummit.png" alt="Logo AfriConnectSummit" height="60">
+                            <p>La plateforme qui connecte les talents tech africains aux entreprises du monde entier.</p>
+                        </div>
+
+                        <!--Colonne2-->
+                        <div class="col-12 col-md-3">
+                            <h2> Liens utiles</h2>
+                            <ul>
+                                <li><a href="index.html">Accueil</a></li>
+                                <li><a href="programme.html"> Programme</a></li>
+                                <li><a href="intervenants.html">Intervenants</a></li>
+                            </ul>
+                        </div>
+
+                        <!--Colonne3-->
+                        <div class="col-12 col-md-3">
+                            <h2>Ressources</h2>
+                            <ul>
+                                <li><a href="contact.html">Inscription & Contact</a></li>
+                            </ul>
+                        </div>
+
+                        <!--Colonne4-->
+                        <div class="col-12 col-md-3">
+                            <h2>Contact</h2>
+                            <p>Contact@AfriSummitConnect.com</p>
+                            <p>+221 78 848 47 21</p>
+
+                            <!--Icones réseaux sociaux-->
+                            <div class="social-links">
+                                <a href="#" aria-label="SnapChat AfriConnectSummit"><i class="bi bi-snapchat" aria-hidden="true"></i></a>
+                                <a href="#" aria-label="Twitter AfriConnectSummit"><i class="bi bi-twitter" aria-hidden="true"></i></a>
+                                <a href="#" aria-label="Instagram AfriConnectSummit"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+
+                             <!--Copyright dynamique-->
+                <p class="copyright">&copy; <span id="annee"></span> AfriConnectSummit. Tous droits réservés</p>
+                </div>
+            </footer>
+                <button id="retourHaut" class="btn btn-primary" type="button" aria-label="Retour en haut de la page">
+                    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+                </button>
+
+    <script src="JS/main.JS"></script>
+</body>
+</html>

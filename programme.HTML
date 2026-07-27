@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <title>Programme</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+            <div class="container">
+                <!-- Logo -->
+                <!-- <a class="navbar-brand" href="index.html">
+                    <img src="images/logo_africonnectsummit.png" alt="Logo AfriConnectSummit" height="40">
+                </a> -->
+                 <!-- Bouton mobile (Menu Hamburger)-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Ouvrir le menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--Liens de navigation-->
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="navbar-brand" href="index.html"><img src="images/logo_africonnectsummit.png" alt="Logo AfriConnectSummit" height="40"></a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="programme.HTML">Programme</a></li>
+                        <li class="nav-item"><a class="nav-link" href="intervenants.HTML">Intervenants</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.HTML">Inscription & Contact</a></li>
+                    </ul>
+                    <!--Bouton Dark Mode-->
+                    <button id="darkModeToggle" class="btn btn-outline-secondary ms-3" 
+                    type="button" aria-label="Activer le mode sombre"><i class="bi bi-moon" aria-hidden="true"></i>
+                    </button>
+                    <!-- CTA Navbar-->
+                     <a href="programme.HTML" class="btn btn-primary ms-3"> Rejoindre AfriSummitConnect</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container" id="programme-conference">
+            <div class="page-hero">
+                <h1>Programme de la conférence</h1>
+                <p><strong>Fil d'Ariane :</strong> Accueil &gt; Programme</p>
+            </div>
+                <h2>Jour 1 — Exemple de sessions</h2>
+                <div class="table-card">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Heure</th>
+                                <th>Session</th>
+                                <th>Intervenant</th>
+                                <th>Salle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>09h00</td><td>Ouverture officielle</td><td>Robert Diassé</td><td>Salle A</td></tr>
+                            <tr><td>10h00</td><td>L'IA au service de l'Afrique</td><td>Thierno Bah</td><td>Salle A</td></tr>
+                            <tr><td>11h30</td><td>Financer sa startup tech</td><td>Nadia Benali</td><td>Salle B</td></tr>
+                            <tr><td>14h00</td><td>Cloud et souveraineté numérique</td><td>Kwame Asante</td><td>Salle A</td></tr>
+                            <tr><td>16h00</td><td>Table ronde : Femmes dans la tech</td><td>Aminata Diarra</td><td>Salle C</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Jour 2 et 3</h2>
+                <p>Des structures similaires, avec des thématiques différentes autour de Data &amp; IA, Business, Design et Cybersécurité.</p>
+<div class="table-card">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Heure</th>
+                                <th>Session</th>
+                                <th>Intervenant</th>
+                                <th>Salle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>10h30</td><td>Big Data</td><td>Aissatou Barry</td><td>Salle A</td></tr>
+                            <tr><td>12h00</td><td>Business Intelligence</td><td>kwame Asante</td><td>Salle A</td></tr>
+                            <tr><td>14h30</td><td>Design graphique</td><td>Bakary Coulibaly</td><td>Salle B</td></tr>
+                            <tr><td>16h00</td><td>UX Design</td><td>Fatoumata Traoré</td><td>Salle C</td></tr>
+                            <tr><td>18h00</td><td>Evénement de cloture: AfriConnectSummit</td><td>Tous les intervenants</td><td>Salle Azalai Hotel</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+                <h2>Thématiques</h2>
+                <div class="theme-grid">
+                    <article class="theme-card">
+                        <h3>IA &amp; Tech</h3>
+                        <p>Les dernières avancées en intelligence artificielle appliquées au contexte africain.</p>
+                    </article>
+                    <article class="theme-card">
+                        <h3>Business</h3>
+                        <p>Financement, croissance et stratégies d'entreprise pour les startups tech.</p>
+                    </article>
+                    <article class="theme-card">
+                        <h3>Design</h3>
+                        <p>UX/UI et design d'impact pour les produits numériques africains.</p>
+                    </article>
+                    <article class="theme-card">
+                        <h3>Data</h3>
+                        <p>Exploitation et gouvernance des données à l'échelle du continent.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+                  <!--=========Footer=========-->
+             <footer class="footer">
+                <div class="container">
+                    <div class="row">
+
+                        <!--Colonne1-->
+                        <div class="col-12 col-md-3">
+                            <img src="images/logo_africonnectsummit.png" alt="Logo AfriConnectSummit" height="60">
+                            <p>La plateforme qui connecte les talents tech africains aux entreprises du monde entier.</p>
+                        </div>
+
+                        <!--Colonne2-->
+                        <div class="col-12 col-md-3">
+                            <h2> Liens utiles</h2>
+                            <ul>
+                                <li><a href="index.html">Accueil</a></li>
+                                <li><a href="programme.html"> Programme</a></li>
+                                <li><a href="intervenants.html">Intervenants</a></li>
+                            </ul>
+                        </div>
+
+                        <!--Colonne3-->
+                        <div class="col-12 col-md-3">
+                            <h2>Ressources</h2>
+                            <ul>
+                                <li><a href="contact.html">Inscription & Contact</a></li>
+                            </ul>
+                        </div>
+
+                        <!--Colonne4-->
+                        <div class="col-12 col-md-3">
+                            <h2>Contact</h2>
+                            <p>Contact@AfriSummitConnect.com</p>
+                            <p>+221 78 848 47 21</p>
+
+                            <!--Icones réseaux sociaux-->
+                            <div class="social-links">
+                                <a href="#" aria-label="SnapChat AfriConnectSummit"><i class="bi bi-snapchat" aria-hidden="true"></i></a>
+                                <a href="#" aria-label="Twitter AfriConnectSummit"><i class="bi bi-twitter" aria-hidden="true"></i></a>
+                                <a href="#" aria-label="Instagram AfriConnectSummit"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+
+                             <!--Copyright dynamique-->
+                <p class="copyright">&copy; <span id="annee"></span> AfriConnectSummit. Tous droits réservés</p>
+                </div>
+            </footer>
+                <button id="retourHaut" class="btn btn-primary" type="button" aria-label="Retour en haut de la page">
+                    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+                </button>
+
+    <script src="JS/main.JS"></script>
+</body>
+</html>
+
+
+

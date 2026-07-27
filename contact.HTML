@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <title>Inscription & Contact</title>
+</head>
+<body>
+    <header>
+       <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+            <div class="container">
+                <!-- Logo -->
+                <!-- <a class="navbar-brand" href="index.html">
+                    <img src="images/logo_africonnectsummit.png" alt="Logo AfriConnectSummit" height="40">
+                </a> -->
+                 <!-- Bouton mobile (Menu Hamburger)-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Ouvrir le menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--Liens de navigation-->
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="navbar-brand" href="index.html"><img src="images/logo_africonnectsummit.png" alt="Logo AfriConnectSummit" height="40"></a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="programme.HTML">Programme</a></li>
+                        <li class="nav-item"><a class="nav-link" href="intervenants.HTML">Intervenants</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.HTML">Inscription & Contact</a></li>
+                    </ul>
+                    <!--Bouton Dark Mode-->
+                    <button id="darkModeToggle" class="btn btn-outline-secondary ms-3" 
+                    type="button" aria-label="Activer le mode sombre"><i class="bi bi-moon" aria-hidden="true"></i>
+                    </button>
+                    <!-- CTA Navbar-->
+                     <a href="programme.HTML" class="btn btn-primary ms-3"> Rejoindre AfriSummitConnect</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <main>
+        <section class="container" id="contact">
+            <h1>Rejoignez-nous</h1>
+            <p><strong>Fil d'Ariane :</strong> Accueil &gt; Contact</p>
+
+            <form>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <label for="nom">Nom complet</label>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="telephone">Téléphone</label>
+                        <input type="tel" id="telephone" name="telephone">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="type">Type de participation</label>
+                        <select id="type" name="type">
+                            <option>Participant</option>
+                            <option>Intervenant</option>
+                            <option>Sponsor</option>
+                            <option>Presse</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="pays">Pays africain</label>
+                        <input type="text" id="pays" name="pays" placeholder="Ex. Sénégal">
+                    </div>
+                    <div class="col-12">
+                        <label for="message">Message / Motivation</label>
+                        <textarea id="message" name="message" rows="5"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+
+
+
+             <!-- Carte Google Maps intégrée (iframe) -->
+                        <iframe
+                            title="Localisation d'AfriTalent à Dakar"
+                            src="https://www.google.com/maps?q=Dakar,Senegal&output=embed"
+                            width="500" height="300" style="border:0;"
+                            allowfullscreen="" loading="lazy">
+                        </iframe>
+
+            <h2>FAQ</h2>
+            <details>
+                <summary>Ou se déroule la conférence ?</summary>
+                <p>A Dakar, Sénégal, dans un lieu qui sera confirmé prochainement.</p>
+            </details>
+            <details>
+                <summary>Les billets incluent-ils les repas ?</summary>
+                <p>Oui, le pass standard inclut les pauses café et le déjeuner.</p>
+            </details>
+            <details>
+                <summary>Puis-je proposer une intervention ?</summary>
+                <p>Oui, via le formulaire en sélectionnant « Intervenant ».</p>
+            </details>
+            <details>
+                <summary>Y a-t-il des tarifs étudiants ?</summary>
+                <p>Oui, sur présentation d'une carte étudiante valide.</p>
+            </details>
+            <details>
+                <summary>Le programme sera-t-il enregistré ?</summary>
+                <p>Les sessions principales seront disponibles en replay après l'événement.</p>
+            </details>
+            
+        </section>
+    </main>
+
+                
+                  <!--=========Footer=========-->
+             <footer class="footer">
+                <div class="container">
+                    <div class="row">
+
+                        <!--Colonne1-->
+                        <div class="col-12 col-md-3">
+                            <img src="images/logo_africonnectsummit.png" alt="Logo AfriConnectSummit" height="60">
+                            <p>La plateforme qui connecte les talents tech africains aux entreprises du monde entier.</p>
+                        </div>
+
+                        <!--Colonne2-->
+                        <div class="col-12 col-md-3">
+                            <h2> Liens utiles</h2>
+                            <ul>
+                                <li><a href="index.html">Accueil</a></li>
+                                <li><a href="programme.html"> Programme</a></li>
+                                <li><a href="intervenants.html">Intervenants</a></li>
+                            </ul>
+                        </div>
+
+                        <!--Colonne3-->
+                        <div class="col-12 col-md-3">
+                            <h2>Ressources</h2>
+                            <ul>
+                                <li><a href="contact.html">Inscription & Contact</a></li>
+                            </ul>
+                        </div>
+
+                        <!--Colonne4-->
+                        <div class="col-12 col-md-3">
+                            <h2>Contact</h2>
+                            <p>Contact@AfriSummitConnect.com</p>
+                            <p>+221 78 848 47 21</p>
+
+                            <!--Icones réseaux sociaux-->
+                            <div class="social-links">
+                                <a href="#" aria-label="SnapChat AfriConnectSummit"><i class="bi bi-snapchat" aria-hidden="true"></i></a>
+                                <a href="#" aria-label="Twitter AfriConnectSummit"><i class="bi bi-twitter" aria-hidden="true"></i></a>
+                                <a href="#" aria-label="Instagram AfriConnectSummit"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+
+                             <!--Copyright dynamique-->
+                <p class="copyright">&copy; <span id="annee"></span> AfriConnectSummit. Tous droits réservés</p>
+                </div>
+            </footer>
+                <button id="retourHaut" class="btn btn-primary" type="button" aria-label="Retour en haut de la page">
+                    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+                </button>
+
+    <script src="JS/main.JS"></script>
+</body>
+</html>
